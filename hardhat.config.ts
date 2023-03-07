@@ -70,15 +70,6 @@ const config: HardhatUserConfig = {
   solidity: {
     compilers: [
       {
-        version: "0.4.23",
-        settings: {
-          optimizer: {
-            runs: 200,
-            enabled: true
-          }
-        }
-      },
-      {
         version: "0.8.4",
         settings: {
           optimizer: {
@@ -108,7 +99,7 @@ const config: HardhatUserConfig = {
       }
     },
     forknet: {
-      url: "https://mainnet.infura.io/v3/${process.env.INFURA_KEY}",
+      url: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
     },
     mainnet: {
       ...sharedNetworkConfig,
